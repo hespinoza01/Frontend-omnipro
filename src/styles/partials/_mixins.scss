@@ -15,16 +15,7 @@
 @mixin input-base {
     border: none;
     outline: none;
-    padding: 0.5rem 1rem;
-}
-
-// base styles for max-width
-@mixin max-width {
-    min-width: 1240px;
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 8px 16px;
+    padding: 12px 0;
 }
 
 // Link style base

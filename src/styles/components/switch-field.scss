@@ -1,0 +1,47 @@
+.SwitchField {
+    @include flex-horizontal;
+    @include dosis($weight: 600);
+    justify-content: center;
+    align-items: center;
+    color: #F5F5F5;
+    font-size: 16px;
+    margin-left: 4px;
+    width: fit-content;
+
+    .SwitchField-switch {
+        background-color: #9692AE;
+        border-radius: 100px;
+        height: 14px;
+        width: 34px;
+        transition: background-color .25s;
+
+        .SwitchField-switch__thumb {
+            display: block;
+            background-color: $white;
+            border-radius: 100px;
+            height: 100%;
+            width: 15px;
+            transform: scale(1.35) translateX(0);
+            transition: transform .25s;
+        }
+    }
+
+    .SwitchField-input {
+        display: none;
+
+        &:checked + .SwitchField-switch {
+            background-color: $green;
+
+            .SwitchField-switch__thumb {
+                transform: scale(1.35) translateX(100%);
+                background-color: darken($green, 10);
+            }
+        }
+    }
+
+    .SwitchField-label {
+        display: inline-block;
+        font-size: inherit;
+        margin-left: 8px;
+    }
+}
