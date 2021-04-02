@@ -1,0 +1,35 @@
+.QuantitySelector {
+    @include flex-horizontal;
+    @include monserrat;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    width: fit-content;
+
+    .QuantitySelector-label {
+        display: block;
+        margin-right: 12px;
+        text-transform: uppercase;
+    }
+
+    .QuantitySelector-controls {
+        @include flex-horizontal;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #DEDEDE;
+        height: 40px;
+        width: 140px;
+    }
+
+    .control-button {
+        @include input-base;
+        background-color: transparent;
+        width: 40px;
+        transition: background-color .25s;
+
+        &:active {
+            background-color: darken($white, 10);
+        }
+    }
+}

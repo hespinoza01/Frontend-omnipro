@@ -1,0 +1,25 @@
+.Rating {
+    @include flex-horizontal;
+    @include monserrat;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+    .Rating-stars {
+        font-size: 20px;
+        color: $red;
+    }
+
+    .star-item {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .Rating-label {
+        display: block;
+        color: #666;
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 12px;
+    }
+}

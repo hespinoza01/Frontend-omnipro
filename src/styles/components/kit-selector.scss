@@ -1,0 +1,43 @@
+.KitSelector {
+    @include monserrat();
+    @include flex-horizontal;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    width: fit-content;
+
+    .KitSelector-label {
+        display: block;
+        font-size: 16px;
+        margin-right: 16px;
+    }
+
+    .KitSelector-options {
+        @include flex-horizontal;
+        justify-content: flex-start;
+        font-weight: 600;
+        list-style: none;
+        user-select: none;
+        width: 100%;
+    }
+
+    .option-item {
+        @include flex-horizontal;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 45px;
+        margin-right: 12px;
+        border: 1px solid #DEDEDE;
+        transition: background-color .25s;
+
+        &.active {
+            background-color: $black;
+            color: $white;
+            border-color: $black;
+        }
+    }
+}

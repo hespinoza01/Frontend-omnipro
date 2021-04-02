@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+// import utils
+import { randomKey } from 'utils'
+
 /**
  * @param {Array<String>} availablesSizes - list from sizes availables
  * for current product
@@ -37,6 +40,7 @@ export default React.memo(function SizeSelector({
                     const activeClass = selectedSize === size ? 'active' : ''
                     return (
                         <li
+                            key={randomKey()}
                             onClick={() => onSelectSize(size)}
                             className={`option-item ${disableClass} ${activeClass}`}
                         >
