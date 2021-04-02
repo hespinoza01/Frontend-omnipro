@@ -1,0 +1,24 @@
+.SidebarMenuButton {
+    @include input-base;
+    @include flex-vertical;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: $white;
+    font-size: 30px;
+    padding: 5px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+
+    .icon {
+        animation: show-icon .35s;
+
+        @keyframes show-icon {
+            from {
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+        }
+    }
+}

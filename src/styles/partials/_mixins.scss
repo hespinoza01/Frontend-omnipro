@@ -59,6 +59,12 @@
     font-size: 18px;
     text-transform: capitalize;
     width: 100%;
+    user-select: none;
+    transition: transform .25s;
+
+    &:active {
+        transform: scale(.97);
+    }
 }
 
 @mixin full-screen {

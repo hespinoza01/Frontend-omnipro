@@ -10,11 +10,35 @@
         left: 0;
         right: 0;
         z-index: -10;
+
+        path {
+            transition: transform .5s;
+        }
+
+        &.animate {
+            #background-path-1 {
+                transform: translate3d(-100%, 50%, 0);
+            }
+
+            #background-path-2 {
+                transform: translate3d(100%, -50%, 0);
+            }
+        }
     }
 
     .Login-logo {
         display: block;
         margin: 40px auto 80px auto;
+    }
+
+    .Login-content {
+        animation: show-content .35s;
+
+        @keyframes show-content {
+            from {
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
     }
 
     .Login-content__tabs {

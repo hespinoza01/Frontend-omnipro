@@ -4,8 +4,13 @@ import React from 'react'
 import { TextField, SwitchField } from 'components'
 
 export default React.memo(function LoginForm() {
+    // capture submit action and prevent site reload
+    const _onSubmit = e => {
+        e.preventDefault()
+    }
+
     return (
-        <form className='LoginForm'>
+        <form className='LoginForm' onSubmit={_onSubmit}>
             <TextField label='email' placeholder='ejemplo@email.com' />
 
             <TextField
