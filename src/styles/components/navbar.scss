@@ -1,0 +1,25 @@
+.Navbar {
+    @include flex-horizontal;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 7px -1px rgba($black, .35);
+    padding: 20px;
+    width: 100%;
+
+    .Navbar-logo {
+        height: 25px;
+    }
+
+    .Navbar-nav {
+        @include flex-horizontal;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        min-width: 120px;
+        max-width: 250px;
+    }
+
+    .nav-item {
+        font-size: 24px;
+    }
+}

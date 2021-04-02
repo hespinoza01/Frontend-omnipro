@@ -1,0 +1,44 @@
+.SizeSelector {
+    @include monserrat();
+    @include flex-horizontal;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+
+    .SizeSelector-label {
+        display: block;
+        margin-right: 16px;
+    }
+
+    .SizeSelector-options {
+        @include flex-horizontal;
+        justify-content: space-evenly;
+        font-weight: 600;
+        list-style: none;
+        user-select: none;
+        width: 100%;
+    }
+
+    .option-item {
+        @include flex-horizontal;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #DEDEDE;
+        transition: background-color .25s;
+
+        &.active {
+            background-color: $black;
+            color: $white;
+            border-color: $black;
+        }
+
+        &.disable {
+            opacity: .32;
+        }
+    }
+}

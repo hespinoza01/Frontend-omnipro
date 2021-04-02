@@ -6,6 +6,8 @@ import LoginForm from './login-form.component'
 import RegisterForm from './register-form.component'
 import SidebarMenuButton from './sidebar-menu-button.component'
 import Sidebar from './sidebar.component'
+import Navbar from './navbar.component'
+import SizeSelector from './size-selector.component'
 
 export {
     AppLoader,
@@ -16,4 +18,6 @@ export {
     RegisterForm,
     SidebarMenuButton,
     Sidebar,
+    Navbar,
+    SizeSelector,
 }
