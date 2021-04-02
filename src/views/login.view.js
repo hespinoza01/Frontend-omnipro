@@ -4,7 +4,7 @@ import { NavLink as Tab, useLocation as Location } from 'react-router-dom'
 import { LoginBackground, Logo } from 'assets'
 
 // import components
-import { LoginForm } from 'components'
+import { LoginForm, RegisterForm } from 'components'
 
 export default function Login() {
     return (
@@ -33,6 +33,8 @@ export default function Login() {
 
                 <div className='Login-content__container'>
                     {Location().pathname === '/login' && <LoginForm />}
+
+                    {Location().pathname === '/register' && <RegisterForm />}
                 </div>
             </section>
         </main>

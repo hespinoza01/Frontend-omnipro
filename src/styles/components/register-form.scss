@@ -1,0 +1,7 @@
+.RegisterForm {
+    @include form-layout;
+
+    .RegisterForm-submit {
+        @include submit-button;
+    }
+}
