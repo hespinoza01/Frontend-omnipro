@@ -1,5 +1,7 @@
 .Login {
+    @include flex-vertical;
     position: relative;
+    padding: 1.5rem;
 
     .background {
         position: absolute;
@@ -8,5 +10,56 @@
         left: 0;
         right: 0;
         z-index: -10;
+    }
+
+    .Login-logo {
+        display: block;
+        margin: 40px auto 80px auto;
+    }
+
+    .Login-content__tabs {
+        @include flex-horizontal;
+        @include dosis(600);
+        font-size: 22px;
+        position: relative;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .Login-content__container {
+        background-color: $purple;
+        border-radius: 0 0 10px 10px;
+        margin-top: -1px;
+    }
+
+    .tab-item {
+        @include link-base;
+        background-color: rgba($purple, .45);
+        border-radius: 10px 10px 0 0;
+        color: $white;
+        mix-blend-mode: normal;
+        padding: 1rem;
+        position: relative;
+        text-align: center;
+        top: 0;
+        transition: background-color .25s;
+        transform: scaleX(1.025);
+        width: calc(50% + 5px);
+
+        &.active {
+            background-color: $purple;
+        }
+
+        &:first-child {
+            clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 0% 100%);
+            left: 0;
+            transform-origin: left center;
+        }
+
+        &:last-child {
+            clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+            right: 0;
+            transform-origin: right center;
+        }
     }
 }

@@ -4,8 +4,13 @@ import { Route, Switch } from 'react-router-dom'
 import { PrivateRoute } from 'components'
 
 // import views
-import {} from 'views'
+import { Login } from 'views'
 
 export default function AppRoutes() {
-    return <Switch></Switch>
+    return (
+        <Switch>
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Login} />
+        </Switch>
+    )
 }

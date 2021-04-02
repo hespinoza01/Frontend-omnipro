@@ -1,0 +1,14 @@
+.LoginForm {
+    @include form-layout;
+    grid-template-rows: 85px 85px 50px 75px 50px;
+
+    .LoginForm-submit {
+        @include submit-button;
+    }
+
+    .LoginForm-reset_password {
+        @include dosis($weight: 600);
+        color: $white;
+        text-transform: capitalize;
+    }
+}
