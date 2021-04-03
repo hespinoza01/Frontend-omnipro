@@ -20,6 +20,24 @@
     }
 
     .nav-item {
+        position: relative;
         font-size: 24px;
+
+        &[data-counter]:after {
+            @include monserrat;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: attr(data-counter);
+            background-color: $red;
+            color: $white;
+            padding: 2px;
+            min-width: 15px;
+            font-size: 9px;
+            border-radius: 100px;
+            top: -4px;
+            right: -4px;
+          }
     }
 }

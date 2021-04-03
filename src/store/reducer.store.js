@@ -22,9 +22,8 @@ export default function Reducer(state, action) {
         // Add new product to shoplist
         case actions.AddProduct:
             const { shoplist } = state
-            shoplist.push(payload)
 
-            return { ...state, shoplist }
+            return { ...state, shoplist: [...shoplist, payload] }
 
         // Set logged user
         case actions.SetLoggedUser:

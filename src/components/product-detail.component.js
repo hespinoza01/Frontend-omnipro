@@ -7,7 +7,12 @@ import {
     QuantitySelector,
 } from 'components'
 
+// import hooks
+import { useShoplist } from 'hooks'
+
 export default function ProductDetail() {
+    const { addShoplist } = useShoplist()
+
     return (
         <section className='ProductDetail'>
             <div className='ProductDetail-picture'>Photo</div>
@@ -29,7 +34,12 @@ export default function ProductDetail() {
 
                 <QuantitySelector />
 
-                <button className='add-shoplist'>añadir al carrito</button>
+                <button
+                    onClick={() => addShoplist('producto')}
+                    className='add-shoplist'
+                >
+                    añadir al carrito
+                </button>
             </div>
 
             <ProductDescription value='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos nemo sequi eaque soluta consequuntur unde rerum facere voluptatum!' />
