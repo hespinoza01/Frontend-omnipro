@@ -11,6 +11,9 @@ import SizeSelector from './size-selector.component'
 import KitSelector from './kit-selector.component'
 import QuantitySelector from './quantity-selector.component'
 import Rating from './rating.component'
+import ProductDescription from './product-description.component'
+import ProductCard from './product-card.component'
+import SuggestionProducts from './suggestion-products.component'
 
 export {
     AppLoader,
@@ -26,4 +29,7 @@ export {
     KitSelector,
     QuantitySelector,
     Rating,
+    ProductDescription,
+    ProductCard,
+    SuggestionProducts,
 }

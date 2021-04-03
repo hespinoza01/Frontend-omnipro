@@ -1,0 +1,30 @@
+.SuggestionProducts {
+    @include flex-vertical;
+
+    .SuggestionProducts-title {
+        @include monserrat;
+        font-size: 24px;
+        margin-bottom: 16px;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    .SuggestionProducts-list {
+        @include flex-horizontal;
+        flex-wrap: nowrap;
+        flex-grow: 0;
+        overflow-y: auto;
+        padding-bottom: 8px;
+        width: 100%;
+
+        .ProductCard {
+            margin-right: 8px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

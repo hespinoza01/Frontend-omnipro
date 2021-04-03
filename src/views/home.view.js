@@ -5,6 +5,8 @@ import {
     Rating,
     KitSelector,
     QuantitySelector,
+    ProductDescription,
+    SuggestionProducts,
 } from 'components'
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
             <KitSelector />
             <Rating />
             <QuantitySelector />
+            <ProductDescription />
+            <SuggestionProducts />
         </main>
     )
 }
