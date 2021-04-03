@@ -1,3 +1,6 @@
-const initialState = {}
+const initialState = {
+    users: {},
+    shoplist: [],
+}
 
 export default initialState

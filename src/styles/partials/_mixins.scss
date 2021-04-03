@@ -65,6 +65,10 @@
     &:active {
         transform: scale(.97);
     }
+
+    &:disabled {
+        opacity: .65;
+    }
 }
 
 @mixin full-screen {

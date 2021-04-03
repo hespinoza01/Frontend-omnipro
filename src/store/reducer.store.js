@@ -10,6 +10,22 @@ export default function Reducer(state, action) {
 
     // Verify action reducer type
     switch (type) {
+        // Add new user to login list
+        case actions.AddUser:
+            // extract current users
+            const { users } = state
+            // register new user
+            users[payload.email] = payload
+
+            return { ...state, users }
+
+        // Add new product to shoplist
+        case actions.AddProduct:
+            const { products } = state
+            products.push(payload)
+
+            return { ...state, products }
+
         default:
             return state
     }
