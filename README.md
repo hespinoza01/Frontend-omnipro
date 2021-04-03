@@ -22,7 +22,7 @@ Development
 Build a simple web interface according to the provided design: https://www.figma.com/file/SKzL1MltQ1lj4U0uq68mzPxB/Front-End-Developer-Test?node-id=0%3A1
 
 
-A concise and documented Git history is expected. When the development has been finished a Merge Request should be created in order to notify the technical team that the test is ready to be evaluated. 
+A concise and documented Git history is expected. When the development has been finished a Merge Request should be created in order to notify the technical team that the test is ready to be evaluated.
 
 
 Bonus
@@ -30,5 +30,13 @@ Bonus
 Include and implement an external Javascript library to achieve the onclick animation.
 
 Good luck!
+
+# Documentation
+
+This application was built with **React**. Using a **personal boilerplate**. **Sass** was used to create the style sheets and **React Router Dom** for navigation between different screens. **React Icons** is used as an icon library, it also made use of hooks created by myself.
+
+The application uses a basic **React Context** to store the list of registered users and the quantity of products added to the shopping cart.
+
+To access the application it will be necessary to register, after completing the registration, you can login with the credentials previously entered.
 
 
