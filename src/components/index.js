@@ -14,6 +14,8 @@ import Rating from './rating.component'
 import ProductDescription from './product-description.component'
 import ProductCard from './product-card.component'
 import SuggestionProducts from './suggestion-products.component'
+import ProductDetail from './product-detail.component'
+import Footer from './footer.component'
 
 export {
     AppLoader,
@@ -32,4 +34,6 @@ export {
     ProductDescription,
     ProductCard,
     SuggestionProducts,
+    ProductDetail,
+    Footer,
 }
