@@ -60,6 +60,7 @@ export default function useUser() {
                 resolve(false)
             }
 
+            dispatch(actions.SetLoggedUser)
             resolve(true)
         })
     }

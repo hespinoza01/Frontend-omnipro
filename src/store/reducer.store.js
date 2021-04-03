@@ -21,10 +21,14 @@ export default function Reducer(state, action) {
 
         // Add new product to shoplist
         case actions.AddProduct:
-            const { products } = state
-            products.push(payload)
+            const { shoplist } = state
+            shoplist.push(payload)
 
-            return { ...state, products }
+            return { ...state, shoplist }
+
+        // Set logged user
+        case actions.SetLoggedUser:
+            return { ...state, isLogged: true }
 
         default:
             return state

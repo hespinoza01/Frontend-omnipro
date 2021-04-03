@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 // import components
-import { TextField } from 'components'
+import { TextField, SuccessAlert } from 'components'
 
 // import hooks
 import { useInput, useLoader, useUser } from 'hooks'
@@ -17,6 +18,8 @@ export default function RegisterForm() {
     const [lastname] = useInput('')
     const [email] = useInput('')
     const [password] = useInput('')
+
+    const [showSuccessAlert, setShowSuccessAlert] = useState(false)
 
     // capture submit action and prevent site reload
     const onSubmit = async e => {
@@ -34,56 +37,61 @@ export default function RegisterForm() {
         })
 
         loader.hide()
+        setShowSuccessAlert(true)
 
         // redirect to login
-        History.push('/login')
+        setTimeout(() => History.push('/login'), 2500)
     }
 
     return (
-        <form className='RegisterForm' onSubmit={onSubmit}>
-            <TextField
-                {...firstname}
-                label='nombre'
-                placeholder='Juan'
-                required
-            />
+        <>
+            <form className='RegisterForm' onSubmit={onSubmit}>
+                <TextField
+                    {...firstname}
+                    label='nombre'
+                    placeholder='Juan'
+                    required
+                />
 
-            <TextField
-                {...lastname}
-                label='apellido'
-                placeholder='Pérez'
-                required
-            />
+                <TextField
+                    {...lastname}
+                    label='apellido'
+                    placeholder='Pérez'
+                    required
+                />
 
-            <TextField
-                {...email}
-                label='email'
-                placeholder='ejemplo@email.com'
-                type='email'
-                required
-            />
+                <TextField
+                    {...email}
+                    label='email'
+                    placeholder='ejemplo@email.com'
+                    type='email'
+                    required
+                />
 
-            <TextField
-                {...password}
-                label='contraseña'
-                placeholder='********'
-                type='password'
-                required
-            />
+                <TextField
+                    {...password}
+                    label='contraseña'
+                    placeholder='********'
+                    type='password'
+                    required
+                />
 
-            <button
-                disabled={
-                    !(
-                        firstname.value &&
-                        lastname.value &&
-                        email.value &&
-                        password.value
-                    )
-                }
-                className='RegisterForm-submit'
-            >
-                registro
-            </button>
-        </form>
+                <button
+                    disabled={
+                        !(
+                            firstname.value &&
+                            lastname.value &&
+                            email.value &&
+                            password.value
+                        )
+                    }
+                    className='RegisterForm-submit'
+                >
+                    registro
+                </button>
+            </form>
+
+            {showSuccessAlert && <SuccessAlert />}
+        </>
     )
 }

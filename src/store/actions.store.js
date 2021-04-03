@@ -10,6 +10,10 @@ const actions = {
         return 'GET_USER'
     },
 
+    get SetLoggedUser() {
+        return 'SET_LOGGED_USER'
+    },
+
     get AddProduct() {
         return 'ADD_PRODUCT'
     },

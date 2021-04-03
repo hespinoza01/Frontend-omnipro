@@ -11,7 +11,7 @@ export default function AppRoutes() {
         <Switch>
             <Route path='/login' component={Login} />
             <Route path='/register' component={Login} />
-            <Route path='/' component={Home} />
+            <PrivateRoute path='/' component={Home} />
         </Switch>
     )
 }

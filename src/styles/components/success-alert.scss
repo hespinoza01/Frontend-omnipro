@@ -1,0 +1,32 @@
+.SuccessAlert {
+    @include dosis;
+    @include flex-vertical;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: $green;
+    height: 510px;
+    width: calc(100% - 3rem);
+    top: 50%;
+    transform: translateY(-120px);
+    animation: show-alert .45s;
+
+    @keyframes show-alert {
+        from {
+            transform: translateY(100%);
+        }
+    }
+
+    .SuccessAlert-title {
+        color: $purple;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+    }
+
+    .SuccessAlert-icon {
+        transform: translateX(15px);
+    }
+}

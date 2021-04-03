@@ -16,6 +16,7 @@ import ProductCard from './product-card.component'
 import SuggestionProducts from './suggestion-products.component'
 import ProductDetail from './product-detail.component'
 import Footer from './footer.component'
+import SuccessAlert from './success-alert.component'
 
 export {
     AppLoader,
@@ -36,4 +37,5 @@ export {
     SuggestionProducts,
     ProductDetail,
     Footer,
+    SuccessAlert,
 }
